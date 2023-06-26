@@ -9,11 +9,13 @@ public class Person  implements Comparable<Person>{
 	public String name;
 	public int age;
 	public int total;
+	public static int number = 0;
 	
 	public Person(String name, int age,int total) {
 		this.name = name;
 		this.age = age;
 		this.total = total;
+		number++;
 	}
 	/*
 	 * 비교할 특정 필드값을 오버라이드 하는데, 비교할 객체와 같으면 0,

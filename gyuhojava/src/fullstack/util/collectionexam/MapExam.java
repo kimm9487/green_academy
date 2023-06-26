@@ -1,7 +1,11 @@
 package fullstack.util.collectionexam;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class MapExam {
 
@@ -34,22 +38,70 @@ public class MapExam {
 		System.out.println(map1.size());
 		System.out.println(map1);
 		
+		Map<Integer, Person> students = new HashMap<>();
 		
+		Person a1 = new Person("김규호", 24, 100);
+		students.put(a1.number, a1);
+		Person a2 = new Person("이승민", 28, 200);
+		students.put(a2.number, a2);
+		Person a3 = new Person("이교진", 26, 300);
+		students.put(a3.number, a3);
+		Person a4 = new Person("백승현", 25, 400);
+		students.put(a4.number, a4);
+		Person a5 = new Person("이도형", 24, 500);
+		students.put(a5.number, a5);
 		
+		//위 students 에 각 객체의 넘버값을 key 로 해서 put 시켜보세요.
 		
+		System.out.println(students.size());
+		System.out.println(students.containsKey(1));
+		System.out.println(students.get(1).name);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		Iterator it = students.keySet().iterator();
+		ArrayList<Person> values = new ArrayList(students.values());
+		while(it.hasNext()) {
+			for(Person p : values)
+			System.out.println(it.next() + " : " + p.name);
+		}
 		
 	}
+		
+		/*
+		Set set = students.entrySet();
+		Iterator it = set.iterator();
+		
+		while(it.hasNext()) {
+			Map.Entry e = (Map.Entry)it.next();
+			
+			//System.out.println(e.getValue());
+			System.out.println(e.getKey());
+		*/
+			
+			/*
+			Set subset = ((HashMap)e.getValue()).entrySet();
+			
+			Iterator innerIt =  subset.iterator();
+			
+			System.out.println("-- " + e.getKey() + " { " + subset.size() + "}");
+			*/
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
 
-}
+
