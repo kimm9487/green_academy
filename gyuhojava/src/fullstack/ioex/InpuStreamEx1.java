@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class InputStreamEx1 {
+public class InpuStreamEx1 {
 
 	public static void main(String[] args) throws Exception {
 		// 표준 입력스트림(콘솔로부터 입력)을 이용해서 여러분의 키보드값 받아볼게요.
